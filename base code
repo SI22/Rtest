@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lte.css" >
+
+</head>
+<body>
+    
+</body>
+</html>
+<ul class="construction">
+<style>
+  summary {
+    display: block;
+    list-style: none;
+  }
+  </style>
+
+    <li><details><summary>曲線</summary>
+    曲線とは～</details>
+    
+     <ul>
+    
+    　　　　　<details><summary><li>　　正則曲線</summary>任意の点が微分可能性を持つ曲線</details>
+    
+    <ul>
+      <details><summary></summary></details>
+    　　　　　　　　　　　<details><summary><li>　　長さ</li></summary>ここではユークリッド距離</details>
+    
+　　　　　
+    　　　　　　　　　　　<details><summary><li>　　パラメータの取り替え</summary>変数変換</details></li>
+　　　　　
+    　　　　　　　　　　　<details><summary><li>　　閉曲線</summary>閉じた曲線</details></li>
+　　　　　
+    　　　　　　　　　　<details><summary><li>　　回転数</summary>回転の数</details>　</li>
+      　　　　　　　　　　<details><summary><li>　　弧長パラメータ</summary>弧をパラメータ表示で表す</details></li>
+    　　　　　<ul>  　　<details><summary><li>　　単位接ベクトル</summary>パラメータから取得される方向ベクトルで長さが1のもの</details></li>
+    　　　　<details><summary><li>　　単位法ベクトル</summary>単位ベクトルで単位接ベクトルと垂直の方向を示す</details></li>
+      　　　　　　　　<ul>
+        　　<details><summary><li>　　動標溝</summary>座標系を取り替える操作の一種</details></li>
+        　　<details><summary><li>　　曲率</summary>円の曲がり程度を表すもの</details></li>
+        <ul>
+          　　 <details><summary><li>　　頂点</summary>頂点</details></li>
+          <ul>　　 <details><summary><li>　　曲率半径</summary>曲率の逆数になっている</details></li>
+          　　 <details><summary><li>　　曲率中心</summary>近似円の中心</details></li>
+          <ul>　　 <details><summary><li></summary>　　曲率円</summary>近似円</details></ul>
+        </ul>
+      </ul>
+    
+    　　　</ul>
+    
+    　　</li>
+    
+    　　
