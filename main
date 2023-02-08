@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">My Website</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container my-5">
+            <h1 class="text-center">Welcome to My Website!</h1>
+            <p class="text-center">このサイトは微分積分学と代数学の復習のために作られたサイトです
+                <br>それぞれに「定義」「定理」「演習問題」についての項目があります</br>
+                知識の整理に役立てれば幸いです
+            </p>
+           
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            
+                            <h5  class="card-title text-center">
+                                代数学</h5>
+                            <p class="card-text">代数学はその性質から定義を知って理解しているかどうかの確認のような問題が多いです。定義をきちんと復習しましょう。</p>
+                            <a href="C:\Users\syu20\OneDrive\デスクトップ\新しいフォルダー (4)\代数学サイト.html" class="btn btn-primary btn-block">代数学を学ぶ</a>
+                            </div>
+                            
+                                <br>
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            
+                            <h5 class="card-title text-center">微分積分学</h5>
+                            <p class="card-text">微分積分学は代数学とは違い定義を知って理解しているだけでは<br>
+                            問題が解けるようになる訳ではありません。問題を解くには<br>
+                        その問題の類題をたくさん解く必要があります</p>
+                            <a href="item1.html" class="btn btn-primary btn-block">代数学を学ぶ</a>
+                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
