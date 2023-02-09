@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <title>Document</title>
+    
+       <style>
+        .grf{display:inline-block; background:#c29b5d;
+     padding:15px; border:1px solid #3b5998; border-radius:10px;
+      word-break:break-all;}
+       </style>
+</head>
+<body>
+
+    
+    <div style="text-align: center;">
+    <h1>代数学演習 </h1>
+
+    
+    <div style="display:inline-block; background:#fcfcff; padding:15px; 
+    border:1px solid #3b5998; border-radius:10px; word-break:break-all;">
+    問題1
+    \[問題1. f\rightarrow Y, g: Y\rightarrow Zを写像とする\]
+\[(1)Im(g\circ f)\subset Im g を示しなさい.\]
+\[(2)fが全射ならばIm(g\circ f)=Imgとなることを示しなさい\]
+
+<div class="grf">
+\[(1)\]
+\[g\circ f(x)の定義は　g\circ f(x)=\{g(f(x))|x\in X\}で定められる\]
+\[ここでf(x)はYの部分集合となっているから\]
+\[g(f(x))というのは定義域をf(x)に制限した制限写像となる\]
+\[よって g(f(x))\subset g(Y)である\]
+\[つまり、Im(g\circ f)\subset Img\]
+\[(2)\]
+\[fが全射ならf(X)=Yより\]
+\[Im(g\circ f)=g(f(X))から\]
+\[Im(g\circ f)=g(Y)=Imf\]
+
+</div>
+\[(1)は制限写像という言葉を使えば説明が短くて済みます\]
+\[g\circ f(x)=g(f(x))だということに注意しましょう\]
+     \[問題2\]
+    \[集合XからYへの写像をX\rightarrow Yとする.\]
+    \[(1)fが単射であることの定義は全称命題である.これを日本語で説明しなさい.\]
+    \[(2)(1)で答えた∀命題の否定命題を日本語で答えなさい.\]
+    
+    </div>
+    <div class="grf">
+        \[(1)\]
+        \[任意のXの元x,yにおいて、x\neq yならばf(x)\neq f(y)となるということ\]
+        \[(2)\]
+        \[x\neq y でf(x)\neq f(y)となるXの元　x,yが存在する\]
+        \[(1)が成り立たない場合に成立する命題を考えればいい\]
+
+    </div>
+        
+    \[問題91\]
+    \[Yは有限集合より Y=\{y_1,y_2,・・・y_n\}　(y_i(i\in \mathbb{N})はYの元)とする\]
+    \[今、fが全射より各iにたいしてy_i=xとなるxが存在する\]
+    \[そのうちの一つをx_iとおく\]
+    \[f\circ g が恒等写像となるには\]
+    \[g(y_i)=x_iとすればよい\]
+    \[問題92\]
+    \[準同型写像どうしの合成写像は準同型写像\]
+    \[\phi\circ\psi(ab)=\psi(\phi(ab))=\psi(\phi(a)\phi(b))=\phi\circ\psi(a)\phi\circ\psi(b)\]
+    \[問題93\]
+    \[fを全単射写像とするときfの逆写像gも準同型写像であることを示す\]
+    \[fは準同型写像より、f\circ g(ab)=g(f(ab))=g(f(a)f(b))\]
+    \[またf\circ g は準同型写像であるから f\circ g (ab)=f\circ g(a) f\circ g(b)\]
+    \[よって、g(f(a)f(b))=f\circ g(a) f\circ g (b)であり、\]
+    \[いま、a,bは任意のfの定義域の元であるからfが全射であることからf(a),f(b)はfの値域の任意の元であるから\]
+    \[gは準同型写像\]
+
+    \[問題94\]
+    \[f(ab)=f(b)f(a)のときf(e_1)=e_2を示す\]
+    \[まず、f(e_1e_1= )=f(e_1)f(e_1)\]
+    \[また、f(e_1e_1)=f(e_1)\]
+    \[よって、f(e_1)f(e_1)=f(e_1)\]
+    \[よって、f(e_1)=e_2となる\]
+    \[問題95\]
+    \[f:G_1\rightarrow G_2を群G_1からG_2への準同形写像とする.G_1がアーベル群ならばG_2もアーベル群になることを示しなさい\]
+    \[a,bをG_1の元として任意に選ぶ　ab=baより\]
+    \[f(ab)=f(ba)=f(a)f(b)=f(b)f(a)\]
+    \[ここで、fは全射より、f(a),f(b)はG_2の任意の元となる\]
+    \[よって、G_2はアーベル群\]
+    \[問題96\]
+    \[ f:G_1\rightarrow G_2 をG_1からG_2への準同型写像とする。このとき、次の二条件は同値であることを示す\]
+    \[(1)Kerf={e_1}\]
+    \[(2)fは単射\]
+    \[(1)から(2)を示す\]
+    \[(1)を仮定する\]
+    \[まず、a,b\in{G_1}に対してf(a)=f(b・b^{-1}・a)=f(b)・f(b^{-1}・a)\]
+    \[ここで、a\neq{b}と仮定すると\]
+    \[b^{-1}・a\neq{e_1}より\]
+    \[(1)からf(b^{-1}・a)\neq e_2\]
+    \[よってf(a)\neq f(b)\]
+
+    \[(2)から(1)を示す\]
+    \[(2)を仮定する\]
+    \[まず、f(e_1,e_1)=f(e_1)f(e_1)\]
+    \[また、f(e_1,e_1)=f(e_1)より\]
+    \[f(e_1,e_1)=f(e_1)\]
+    \[よって、f(e_1)=e_2\]
+    \[ゆえに(2)から示された\]
+
+
+    \[問題97\]
+    \[f:GL(2,\mathbb{R})\rightarrow \mathbb{R}^*\]
+    \[f(A)=\frac{detA}{|detA|}\]
+    \[fが準同型写像であることを示す\]
+    \[f(AB)=\frac{detAB}{|detAB|}=\frac{detAdetB}{|detAdetB|}=\frac{detA}{|detA|}\frac{detB}{|detb|}\]=\[f(A)f(B)\]
+
+    
+    \[問題98\]
+    \[\mathbb{C}^*/R_n\cong{\mathbb{C}^*}を示す\]
+    \[f:\mathbb{C^*}\rightarrow \mathbb{C}^*を\]
+    \[f(z)=z^n(z\in\mathbb{C^*})で定める\]
+    \[ すると、fは準同型写像であり、Kerf=R_nであるから準同型定理より示された\]
+
+
+    \[問題98\]
+    \[\]
+
+    \[問題100\]
+    \[\mathbb{R}/\mathbb{Z}\cong{T}を示す\]
+    \[ f:\mathbb{R}\rightarrow= Tを\]
+    \[f(r)=cosr+isinr(r\in\mathbb{R})により定めればよい\]
+
+    \[問題101\]
+    \[\mathbb{C^*}\rightarrow Tを\]
+    \[f(z)=\frac{z}{|z|}とするとき、fが準同型であることを示す\]  
+    \[f(z_1z_2)=\frac{z_1z_2}{|z_1z_2|}=\frac{z_1z_2}{|z_1||z_2|}=\frac{z_1}{|z_1|}\frac{z_2}{|z_2|}=f(z_1)f(z_2)(z_1,z_2\in\mathbb{C}^*)\]
+    
+
+    \[問題102\]
+    \[f:\mathbb{C}^*/\mathbb{R}_{>0}\cong{T}\]
+    \[問題101より\]
+    \[\mathbb{C^*}\rightarrow Tを\]
+    \[f(z)=\frac{z}{|z|}とするとき\]
+    \[ fは準同型写像\]
+    \[ここで,Kerf=\mathbb{R}_{>0},Imf=Tであるから\]
+    \[準同型定理より示された\]
+
+    \[問題103\]
+    \[f:\mathbb{R}\rightarrow\{-1,1\}を\]
+    \[f(A)=detA(A\in\mathbb{R})で定める\]
+    \[この時、fは準同型写像でありKer\{-1,1\}=SO(2,\mathbb{R})であるから\]
+    \[SO(2,\mathbb{R})は\mathbb{R}の部分群\]
+        
+    \[問題104\]
+    \[Gを群とし,G=\{e_G,g\}とし、g^2=e_Gとする(ただし、e_GはGの単位元)\]
+    \[まず、問題103からSO(2,\mathbb{R})\cong{\{-1,1\}}である\]
+    \[ここで、g:G\rightarrow\{-1,1\}を\]
+    \[f(e_G)=1\]
+    \[f(g)=-1\]
+    \[によって定める\]
+    \[するとfは全単射準同型写像となることから\]
+    \[G\cong\{-1,1\}である\]
+    \[よって、SO(2,\mathbb{R})\cong Gである\]
+    \[ (Gは位数が2の巡回群である)\]
+
+    \[問題107\]
+    \[写像の合成を二項演算としているので結合法則は成り立つ\]
+    \[恒等写像は全単射であり、準同型写像である\]
+    \[また、rを任意の写像とするときrとの合成はrであるから単位元でもある\]
+    \[AUT(G)においてGからGへの恒等写像が単位元となっている\]
+    \[また、全単射準同型写像の逆関数も全単射準同型写像となり、f\circ f^{-1}が恒等写像であることから\]
+    \[f\in Aut(G)にたいしてf^{-1}がfの逆元としてAut(G)に存在する\]
+    \[よってAut(G)は群\]
+
+    \[問題108\]
+    \[\varphi(x)(g)=xgx^{-1}\]
+    \[\varphi(x_1x_2)(g)=x_1x_2g(x_1x_2)^{-1}=x_1x_2g(x_2^{-1}x_1^{-1})=\varphi(x_1)\varphi(x_2)(g)\]
+    \[つまり、\varphi(x_1x_2)=\varphi(x_1)\varphi(x_2)\]
+
+        </div>
+        
+</body>
+</html>
