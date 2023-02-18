@@ -18,11 +18,75 @@
         .</p>
     </main>
     <aside>
-        定義9・・・置換<hr>
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<body>
+<h1><p style="text-align: center;">代数学定義集</p></h1>
+    <hr>
+    <h2><p>定義1 ・・・２項演算</p>
+    <hr>
+    <p>\(G\)は集合,\(G\neq \varnothing \)とする<br>
+        \(m\)は\(G\)の二項演算 \(\Leftrightarrow\) \(m:G\times{G}\rightarrow{G}\) 　\(m\)は写像
+        <hr>
+定義2・・・群（厳密な定義）
+<hr>
+\(G\)は集合,\(G\neq\varnothing,m_G:G\times{G}\rightarrow{G}\)とする.<br>
+\((G,m_G)\)は群<br>
+\[\Leftrightarrow(G_1)　\forall{a,b,c}\in{G},　m_G(a,m_G(b,c))=m_G(m_G(a,b),c)\]
+\[(G_2)\exists{e\in{G}}s.t.\forall{a}\in{G},m_G(a,e)=m_G(e,a)=a)\]
+\[(G_3) \forall a\in G , \exists b \in G s.t. m_G(a,b)=m_G(b,a)=e\]
+    <hr>
+    定義3  群（略記した定義）<hr>
+    \(G は写像,G\neq \varnothing ,・:G\times G\rightarrow G とする\)<br>
+    \((G,・）は群\Leftrightarrow\)<br>
+   \[ (G_1)\forall a,b,c\in G  ,a・(b・c)=(a・b)・c\]
+    \[(G_2) \exists e \in G s.t.\forall a,b\in G e・a=a・e=a\]
+    \[(G_3) \forall a \exists b\in G s.t. a・b=b・a\]
+    
+
+<hr>
+定義4・・・アーベル群<hr>
+    \((G,・)は群とする\)<br>
+  \(  Gはアーベル群\Leftrightarrow \forall a, b \in {G}, a・b=b・a\)<br>
+    <hr>
+定義5・・・単位元<hr>
+\[(G,・)は群,e\in G　とする\]
+\[eはGの単位減\Leftrightarrow \forall a\in G , a・e=e・a=a  \]
+<hr>
+定義6・・・逆元
+<hr>
+\[(G,・)は群　, e・a,b\in G , eはGの単位減とする\]
+\[bはaの逆元\Leftrightarrow a・b=b・a=e \]
+\[b=a^{-1}\Leftrightarrow bはaの逆元\]
+<hr>
+定義7・・・位数
+<hr>
+\[Gは群　とする\]
+<p style="text-align: center;">#\(G\) は \(G\) の位数\(\Leftrightarrow\) #\(G\) は\(G\)の要素の数</p>
+
+<hr>
+定義8・・・巡回群
+<hr>
+\[Gは群とする\]
+\[Gは巡回群\Leftrightarrow \exists g_0\in G s.t. \forall g\in G \exists n\in{Z} s.t. g=g_0^{n}\]<hr>
+定義9・・・置換<hr>
 \[\Omega{_n}=\{1,2,・・・,n\},\sigma:\Omega_n\rightarrow \Omega_n とする.\]
 \[\sigma は置換\Leftrightarrow \sigma は全単射\]
 \[S_n:=\{\sigma|\sigma:\Omega_n\rightarrow\Omega_n,\sigma は置換\}\]<hr>
 定義10・・・恒等写像<hr>
+\[\Omega_n=\{1,2,・・・,n\},\epsilon_n\in S_Nとする\]
+\[\Omega_nが恒等写像\Leftrightarrow \forall k \in \Omega_n \epsilon_n(k)=k\]
+定義11・・・巡回置換<hr>
 \[\Omega=\{1,2,///,n\},\sigma\in S_n, i_1,・・・,i_m\in\Omega_n　とする\]
 \[\sigma_n　はi_1,・・・,i_nの巡回置換\Leftrightarrow \sigma(i_1)=i_2,\sigma(i_2)=i_3,・・・,\sigma(i_{m-1})=i_m
 \]
@@ -33,7 +97,7 @@
 \[\tau(\sigma)は\theta　の転倒数\] \[\Leftrightarrow \]
 <p style="text-align: center;">\(T(\sigma)T(\sigma)=\)#\(\{(k, l )\in \omega\times\omega |k\lt l , \sigma(k)\gt\sigma(l)\}\)
    </p> <hr>
-定義13・・・符号<br>
+定義13・・・符号<hr>
 \[sgn(\theta)は\sigma の符号\Leftrightarrow sgn(\sigma)=(-1^T(\sigma))\]
 <hr>
 定義14・・・偶置換<hr>
@@ -42,6 +106,25 @@
 <hr>
 定義15・・・奇置換<hr>
 \[\theta は奇置換\Leftrightarrow sgn(\theta)=-1\]
+</h2>
+
+</body>
+</html>
+1	
+2	群（厳密な定義）
+3	群（略記した定義）
+4	アーベル群
+5	単位元
+6	逆元
+7	位数
+8	巡回群
+9	置換
+10	恒等写像
+11	巡回置換
+12	転倒数
+13	符号
+14	偶置換
+15	奇置換
     </aside>
     <footer>
       <p>© 2023/2/8　開設 </p>
