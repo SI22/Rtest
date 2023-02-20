@@ -1,0 +1,120 @@
+  .container {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			height: 100%;
+		}
+
+		.menu2 {
+			display: inline-block;
+			background: #fcfcff;
+			padding: 15px;
+			border: 1px solid #3b5998;
+			border-radius: 10px;
+			word-break: break-all;
+			width: 25%; /* メニューの幅を設定 */
+		}
+
+		.page2 {
+			display: inline-block;
+			padding: 15px;
+			width: 75%; /* ページの幅を設定 */
+		}
+		/* 選択肢のスタイル */
+		.menu { 
+            /* スクロールバーのスタイルを設定 */
+			white-space: nowrap;
+			overflow-x: auto;
+			overflow-y: hidden;
+			-webkit-overflow-scrolling: touch;
+			-ms-overflow-style: -ms-autohiding-scrollbar;
+			scrollbar-width: thin;
+			scrollbar-color: gray lightgray;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.menu li {
+			font-size: 1.2rem;
+			margin: 0 1rem;
+			padding: 0.5rem 1rem;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+
+		/* カーソルを当てた時のスタイル */
+		.menu li:hover {
+			background-color: #eee;
+			box-shadow: 0 0 5px #ccc;
+		}
+
+		/* 選択された時のスタイル */
+		.menu li.active {
+			background-color: #007bff;
+			color: #fff;
+		}
+
+		/* ページのスタイル */
+		.page {
+			display: none;
+			padding: 1rem;
+			margin-top: 2rem;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+
+		.page.active {
+			display: block;
+		}
+		body {
+			background-color: #F1EFE7;
+			background-image: linear-gradient(to bottom, #F1EFE7, #C6D8C7);
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+		.frame {
+			background-color: #FFFFFF;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			margin: 50px auto;
+			max-width: 800px;
+			padding: 30px;
+			text-align: left;
+		}
+		h1 {
+			color: #3B3B3B;
+			font-size: 36px;
+			font-weight: bold;
+			margin: 0 0 30px 0;
+			text-transform: uppercase;
+		}
+		p {
+			color: #444444;
+			font-size: 20px;
+			line-height: 1.6;
+			margin: 20px 0;
+		}
+		hr {
+			background-color: #E6E6E6;
+			border: none;
+			height: 1px;
+			margin: 30px 0;
+		}
+		.note {
+			background-color: #F5F5F5;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0,0,0,0.1);
+			color: #666666;
+			font-size: 14px;
+			margin: 20px 0;
+			padding: 10px;
+			text-align: left;
+        }
