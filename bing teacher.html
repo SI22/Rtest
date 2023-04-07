@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <link rel="stylesheet" href="C:\Users\syu20\OneDrive\デスクトップ\新しいフォルダー (4)\代数学演習.css">
+	<title>n次対称群Snがアーベル群でないことの証明</title>
+	<style>
+        .container {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			height: 100%;
+		}
+
+		.menu2 {
+			display: inline-block;
+			background: #fcfcff;
+			padding: 15px;
+			border: 1px solid #3b5998;
+			border-radius: 10px;
+			word-break: break-all;
+			width: 25%; /* メニューの幅を設定 */
+		}
+
+		.page2 {
+			display: inline-block;
+			padding: 15px;
+			width: 75%; /* ページの幅を設定 */
+		}
+		/* 選択肢のスタイル */
+		.menu { 
+            /* スクロールバーのスタイルを設定 */
+			white-space: nowrap;
+			overflow-x: auto;
+			overflow-y: hidden;
+			-webkit-overflow-scrolling: touch;
+			-ms-overflow-style: -ms-autohiding-scrollbar;
+			scrollbar-width: thin;
+			scrollbar-color: gray lightgray;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.menu li {
+			font-size: 1.2rem;
+			margin: 0 1rem;
+			padding: 0.5rem 1rem;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+
+		/* カーソルを当てた時のスタイル */
+		.menu li:hover {
+			background-color: #eee;
+			box-shadow: 0 0 5px #ccc;
+		}
+
+		/* 選択された時のスタイル */
+		.menu li.active {
+			background-color: #007bff;
+			color: #fff;
+		}
+
+		/* ページのスタイル */
+		.page {
+			display: none;
+			padding: 1rem;
+			margin-top: 2rem;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+
+		.page.active {
+			display: block;
+		}
+		body {
+			background-color: #F1EFE7;
+			background-image: linear-gradient(to bottom, #F1EFE7, #C6D8C7);
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+		.frame {
+			background-color: #FFFFFF;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			margin: 50px auto;
+			max-width: 800px;
+			padding: 30px;
+			text-align: left;
+		}
+		h1 {
+			color: #3B3B3B;
+			font-size: 36px;
+			font-weight: bold;
+			margin: 0 0 30px 0;
+			text-transform: uppercase;
+		}
+		p {
+			color: #444444;
+			font-size: 20px;
+			line-height: 1.6;
+			margin: 20px 0;
+		}
+		hr {
+			background-color: #E6E6E6;
+			border: none;
+			height: 1px;
+			margin: 30px 0;
+		}
+		.note {
+			background-color: #F5F5F5;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0,0,0,0.1);
+			color: #666666;
+			font-size: 14px;
+			margin: 20px 0;
+			padding: 10px;
+			text-align: left;
+        }
+	</style>
+</head>
+<body>
+    <font face="源瑛こぶり明朝">
+        <ul class="menu">
+            <li class="active" data-page="page1">PART1</li>
+            <li data-page="page2">PART2</li>
+            <li data-page="page3">PART3</li>
+            <li data-page="page4">PART4</li>
+            <li data-page="page5">PART5</li>
+            <li data-page="page6">PART6</li>
+            <li data-page="page7">PART7</li>
+            <li data-page="page8">PART8</li>
+            <li data-page="page9">PART9</li>
+            <li data-page="page10">PART10</li>
+
+        </ul>
+    
+        <div id="page1" class="page active">
+            <h1>part1</h1>
+           <h2> <p>ようこそ代数学演習のサイトのPART1のページへ</p>
+            <p>このページは代数学演習の問題1から問題10までの内容となっています</p>
+            <p>なおこの代数学演習のサイトは1から10までのPARTごとに10問ずつ数字順に</p>
+            <p>解説を提供しています</p>
+        </div>
+    
+        <div id="page2" class="page">
+            <h1>選択肢2のページ</h1>
+            <p>ここに選択肢2に関する内容を書きます。</p>
+        </div>
+    
+        <div id="page3" class="page">
+            <h1>選択肢3のページ</h1>
+            <p>ここに選択肢3に関する内容を書きます。</p>
+        </div>
+    
+        <script>
+            // 選択肢をクリックした時の処理
+            const menuItems = document.querySelectorAll('.menu li');
+            menuItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    // 選択された選択肢をアクティブにする
+                    menuItems.forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+    
+                    // 選択されたページを表示する
+                    const pageId = item.getAttribute('data-page');
+                    const pages = document.querySelectorAll('.page');
+                    const pageId = item.getAttribute('data-page');
+const pages = document.querySelectorAll('.page');
+pages.forEach(page => {
+if (page.id === pageId) {
+page.classList.add('active');
+} else {
+page.classList.remove('active');
+}
+});
+});
+});
+// "Question 1"ボタンがクリックされたら、自動スクロールする
+document.getElementById("question1-button").addEventListener("click", function() {
+  // 目的の要素の座標を取得する
+  var question1Element = document.getElementById("question1");
+  var question1Position = question1Element.getBoundingClientRect().top + window.pageYOffset;
+
+  // スクロール位置を設定する
+  window.scrollTo({ top: question1Position, behavior: 'smooth' });
+});
+
+</script>
+	<div class="frame">
+		<h1>
+            代数学演習問題　PART1　　問題1から問題10
+		</h1>
+        <h1>
+            
+        </h1>
+        
+        
+        <div class="container">
+            <div class="menu2">
+                <h2><p>クリックで指定の問題を見る</p></h2>
+                <button id ="question1-button">問題1</button>   　　<button id ="question6-button">問題6</button>  <br>
+                <button id ="question2-button">問題2</button>   　　<button id ="question7-button">問題7</button>  <br>
+                <button id ="question3-button">問題3</button>   　　<button id ="question8-button">問題8</button>  <br>
+                <button id ="question4-button">問題4</button>   　　<button id ="question9-button">問題9</button>  <br>
+                <button id ="question5-button">問題5</button>   　　<button id ="question10-button">問題0</button>  <br>
+            </div>
+           
+            </div>
+        </div>
+          
+       
+<div id="question1"><p>問題1.
+\(f:{X}\rightarrow{Y}\) 　 \(g:{Y}\rightarrow{Z}\) を写像とする</p></div>
+<p>(1) \(Im(g\circ f)\subset{Im{g}}\) を示しなさい</p>
+<p>(2) \(f\) が全射ならば \(Im(g\circ{f})=Img\) となることを
+    示しなさい</p>
+		</h2>
+		
+		<hr>
+        <p>解答
+
+        </p>
+        <P>(1)</p>
+            <p> \(\forall{z}\in{g\circ{f}}\) と仮定する。</P>
+        <p>まず仮定より、\(z=g\circ{f}(x)\) となる
+             \(x\in{X}\) が存在する。</p>
+            <p>また、\(g\circ{f}(x)=g(f(x))\) であるから
+            </p>
+<p>\(y=f(x)\) とすると　\(z=g(y)\) となる \(y\) が存在する
+    <p>よって、\(y\in{Img}\) となる</p>
+    <p>従って、\(Im(g\circ{f})\subset{Img}\)</p>
+    <p></p>	
+    <div class ="note">
+       <h5>補足、ひとこと</h5>
+			<p>他の方法でも解けますがこの方法が一番シンプルだと思います。
+            </p>
+
+			</p>
+		</div>
+		<hr>
+        <p>(2)</p>
+        <p>(1)より、\(Im{(g\circ{f})}\subset{Img}\) であるから</p>
+        <p>\(Im(g\circ{f})\supset{Img}\) が示せればいい</p>
+        <p>\(\forall{z}\in{Img}\) とすると、\(z=f(y)\)となる \(y\) が存在する</p>
+		<p>\(f\) は全射であるからそのような \(y\) に対して、\(y=f(x)\) となる \(x\) が存在する</p>
+        <p>よって、\(z=g\circ{f}(x)\) となる \(x\) が存在する</p>
+        <p>従って、\(Im(g\circ{f})\supset{Img}\) である</p>
+        <p>以上より \(Im(g\circ{f})=Img\)</p>
+        <div class ="note">
+            <h5>補足、ひとこと</h5>
+			<p>
+この方法で解く必要はありませんが(1)で \(Im(g\circ{f})\subset{Img}\) を示しているのでそれを利用するのが合理的かと思います。
+			</p>
+		</div>
+       
+		<hr>
+        <div id="question2"><h2>
+            <p>問題2. 集合\(X\)から\(Y\)への写像を \(f:X\rightarrow{Y}\) とする.</p>
+        <p>(1) \(f\) が単射であることの定義は全称命題である. これを日本語で説明しなさい.</p>
+        <p>(2) 
+            (1)で答えた全称命題の否定命題を日本語で答えなさい.</p>
+            </h2>
+        </div>
+        <hr>
+       <p>解答</p> 
+        
+            <p>(1)</p>
+            <p>任意の \(X\) の元 \(x_1,x_2\) に対して、 \(x_1\neq{x_2}\) なら \(f(x_1)\neq{f(x_2)}\) となる.</p>
+        
+		<div class ="note">
+            <h5>補足、ひとこと</h5>
+			<p>
+論理記号で書くと　\(\forall x_1,x_2\in{X} ,x_1\neq{x_2}\Rightarrow{f(x)\neq{f(x_2)}}\) ですね。
+			</p>
+		</div>
+       
+		
+		<hr>
+        
+            <p>(2)</p>
+            <p>
+            <p>ある \(X\) の元 \(x_1,x_2\) が存在して、\(x_1\neq{x_2}\) かつ \(f(x_1)\neq{f(x_2)}\) となる.</p>
+		<div class ="note">
+            <h5>補足、ひとこと</h5>
+			<p>
+                「任意の」を「ある」に変えて、「に対して」を「が存在して」に変え、「なら」を「かつ」に変えるという機械的な方法でも解けますが、ここではきちんと（１）の命題の意味を考えて答えましょう。</p>
+			    注意！（ただし、試験中は時間制限があるので機械的に解く方が合理的ではあります)</p>
+		</div>
+    
+        
