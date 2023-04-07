@@ -199,7 +199,7 @@ document.getElementById("question1-button").addEventListener("click", function()
 </script>
 	<div class="frame">
 		<h1>
-            代数学演習問題　PART1　　問題1から問題10
+            代数学Ⅱのbing先生による課題の解答　PART1　　問題1から問題10
 		</h1>
         <h1>
             
@@ -232,70 +232,57 @@ document.getElementById("question1-button").addEventListener("click", function()
 
         </p>
         <P>(1)</p>
-            <p> \(\forall{z}\in{g\circ{f}}\) と仮定する。</P>
-        <p>まず仮定より、\(z=g\circ{f}(x)\) となる
-             \(x\in{X}\) が存在する。</p>
-            <p>また、\(g\circ{f}(x)=g(f(x))\) であるから
-            </p>
-<p>\(y=f(x)\) とすると　\(z=g(y)\) となる \(y\) が存在する
-    <p>よって、\(y\in{Img}\) となる</p>
-    <p>従って、\(Im(g\circ{f})\subset{Img}\)</p>
-    <p></p>	
+          $$
+\begin{aligned}
+\text{Proof:} \quad & \text{まず、任意の } A \in SL(2,R) \text{ と } z \in H \text{ に対して、} \alpha(A,z) \in H \text{ であることを示します。} \\
+& A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \text{ とおきます。このとき、} \alpha(A,z) = \frac{az + b}{cz + d} \text{ です。} \\
+& z = x + iy \text{ とすると、} \\
+& \begin{aligned}
+\operatorname{Im}(\alpha(A,z)) &= \operatorname{Im}\left(\frac{(az + b)(c\overline{z} + d)}{|cz + d|^2}\right) \\
+&= \operatorname{Im}\left(\frac{(ac|z|^2 + (ad + bc)x + bd) + i((ad - bc)y)}{|cz + d|^2}\right) \\
+&= \frac{(ad - bc)y}{|cz + d|^2}.
+\end{aligned} \\
+& \text{ここで、} ad - bc = 1 \text{ であり、} y > 0 \text{ なので、} \operatorname{Im}(\alpha(A,z)) > 0 \text{ が成り立ちます。よって、} \\
+& \alpha(A,z) \in H \text{ です。} \\
+& \\
+& \text{次に、任意の } A,B \in SL(2,R) \text{ と } z \in H \text{ に対して、} \\
+& \alpha(AB,z) = \alpha(A,\alpha(B,z)) \text{ が成り立つことを示します。} \\
+& A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}, B = \begin{pmatrix} e & f \\ g & h \end{pmatrix} \\
+&\text {とおきます。このとき、}\\
+&\begin {aligned}
+\alpha(AB,z) &=\alpha\left(\begin {pmatrix}
+a & b \\ c & d
+\end {pmatrix}
+\begin {pmatrix}
+e & f \\ g & h
+\end {pmatrix}, z\right)\\
+&=\alpha\left(\begin {pmatrix}
+ae+bg & af+bh \\ ce+dg & cf+dh
+\end {pmatrix}, z\right)\\
+&=\frac {(ae+bg)z+(af+bh)}{(ce+dg)z+(cf+dh)}.
+\end {aligned}\\
+&\text {また、}\\
+&\begin {aligned}
+\alpha(A,\alpha(B,z)) &=\alpha\left(\begin {pmatrix}
+a & b \\ c & d
+\end {pmatrix},\frac {ez+f}{gz+h}\right)\\
+&=\frac {a\left(\frac {ez+f}{gz+h}\right)+b}{c\left(\frac {ez+f}{gz+h}\right)+d}\\
+&=\frac {(ae+bg)z+(af+bh)}{(ce+dg)z+(cf+dh)}.
+\end {aligned}\\
+&\text {よって、}\alpha(AB,z)=\alpha(A,\alpha(B,z))\text {が成り立ちます。}\\
+&\\
+&Q.E.D.
+\end {aligned}
+$$
     <div class ="note">
        <h5>補足、ひとこと</h5>
-			<p>他の方法でも解けますがこの方法が一番シンプルだと思います。
-            </p>
+			<p>
 
-			</p>
-		</div>
-		<hr>
-        <p>(2)</p>
-        <p>(1)より、\(Im{(g\circ{f})}\subset{Img}\) であるから</p>
-        <p>\(Im(g\circ{f})\supset{Img}\) が示せればいい</p>
-        <p>\(\forall{z}\in{Img}\) とすると、\(z=f(y)\)となる \(y\) が存在する</p>
-		<p>\(f\) は全射であるからそのような \(y\) に対して、\(y=f(x)\) となる \(x\) が存在する</p>
-        <p>よって、\(z=g\circ{f}(x)\) となる \(x\) が存在する</p>
-        <p>従って、\(Im(g\circ{f})\supset{Img}\) である</p>
-        <p>以上より \(Im(g\circ{f})=Img\)</p>
-        <div class ="note">
-            <h5>補足、ひとこと</h5>
-			<p>
-この方法で解く必要はありませんが(1)で \(Im(g\circ{f})\subset{Img}\) を示しているのでそれを利用するのが合理的かと思います。
-			</p>
-		</div>
-       
-		<hr>
-        <div id="question2"><h2>
-            <p>問題2. 集合\(X\)から\(Y\)への写像を \(f:X\rightarrow{Y}\) とする.</p>
-        <p>(1) \(f\) が単射であることの定義は全称命題である. これを日本語で説明しなさい.</p>
-        <p>(2) 
-            (1)で答えた全称命題の否定命題を日本語で答えなさい.</p>
-            </h2>
-        </div>
-        <hr>
-       <p>解答</p> 
-        
-            <p>(1)</p>
-            <p>任意の \(X\) の元 \(x_1,x_2\) に対して、 \(x_1\neq{x_2}\) なら \(f(x_1)\neq{f(x_2)}\) となる.</p>
-        
-		<div class ="note">
-            <h5>補足、ひとこと</h5>
-			<p>
-論理記号で書くと　\(\forall x_1,x_2\in{X} ,x_1\neq{x_2}\Rightarrow{f(x)\neq{f(x_2)}}\) ですね。
-			</p>
-		</div>
-       
-		
-		<hr>
-        
-            <p>(2)</p>
-            <p>
-            <p>ある \(X\) の元 \(x_1,x_2\) が存在して、\(x_1\neq{x_2}\) かつ \(f(x_1)\neq{f(x_2)}\) となる.</p>
-		<div class ="note">
-            <h5>補足、ひとこと</h5>
-			<p>
-                「任意の」を「ある」に変えて、「に対して」を「が存在して」に変え、「なら」を「かつ」に変えるという機械的な方法でも解けますが、ここではきちんと（１）の命題の意味を考えて答えましょう。</p>
-			    注意！（ただし、試験中は時間制限があるので機械的に解く方が合理的ではあります)</p>
-		</div>
-    
+この問題は、$SL(2,R)$が上半平面$H$に対して左作用することを示す問題です。$SL(2,R)$の元$A$が与えられたとき、$z\in H$に対して、$\alpha(A,z)=\frac{az+b}{cz+d}$と定義されます。この写像が左作用であることを示すには、次の2つの条件を確認する必要があります。
+
+1. 任意の$A\in SL(2,R)$と$z\in H$に対して、$\alpha(A,z)\in H$であること。
+2. 任意の$A,B\in SL(2,R)$と$z\in H$に対して、$\alpha(AB,z)=\alpha(A,\alpha(B,z))$が成り立つこと。
+
+これらの条件を確認することで、この写像が$SL(2,R)$の$H$への左作用であることが示されます。この問題のポイントは、$SL(2,R)$が上半平面$H$に対してどのように作用するかを理解し、その性質を証明することです。。
+        </p>
         
